@@ -92,3 +92,22 @@ let mensaje = (nombre, anio) => {return `Hola ${nombre}, este año tenes o cumpl
 // imprimimos el valor retornante de ejecutar la funcion mensaje con los argumentos de "nahuel" y 26 
 console.log(mensaje("nahuel", 26))
 
+/*
+Ejercicio 6) crear una función lambda que se llame inscribirAlumno, que reciba un array de alumnos y
+un nombre, que agregue al alumno en la ultima posición del array.
+*/
+
+const alumnos = ["nahuel", "pepito", "jose"]
+
+console.log(`Los alumnos del array son: ${alumnos}`)
+// función flecha que declara dos parametros (array, nombre), y ejecuta el metodo push para agregar el nombre al final del array
+
+let inscribirAlumno = (array, nombre) => array.push(nombre)
+
+inscribirAlumno(alumnos, "juan")
+
+console.log(`Los alumnos del array son: ${alumnos}`)
+
+
+
+
