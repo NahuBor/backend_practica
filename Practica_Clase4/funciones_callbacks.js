@@ -97,3 +97,29 @@ console.log(`array antes: ${arrayDePrueba}`)
 agregarSiEstaEntreCeroYDiez(arrayDePrueba, 11)
 console.log(`array despues: ${arrayDePrueba}`)
 
+
+
+/* 
+Ejercicio 3) Definir una función similar a la del punto 2, pero que en vez de un número reciba
+un array con números y valide si cada uno de los elementos cumple con la condición de estar entre cero y diez, debe retornar un array con los números que
+cumplan la función.
+*/
+
+const arrayTest = []
+
+// función que recibe dos parametros, el array y el array de numeros a validar
+// utilizamos el metodo filter para filtar los elementos del array numeros y quedarnos con los que cumplen la condición
+// guardamos ese valor en el array vacio pasado como argumento cuando se llame
+// y retornamos ese mismo array
+
+let agregarConArray = (array, numeros) => {
+    array = numeros.filter(x => x >= 0 && x <= 10)
+    return array
+}
+
+const resultado = agregarConArray(arrayTest, [-1,0,5,10,11])
+
+console.log(`array retornante con los numeros que cumplen la condición: ${resultado}`)
+
+
+// 
