@@ -167,3 +167,28 @@ verificarYAgregar(usuario, verificarSiEsOtaku, agregarUsuario)
 
 console.log(listaDeUsuariosOtakus)
 
+/*
+Ejercicio 5) Realizar una función que se llame validarIngreso, que reciba una edad, y una
+callback. Esta función debe validar por medio de un operador ternario si puede
+intregar o no (la condición es que sea mayor a 18 años). El resultado del operador
+ternario de debe pasar como argumento a la ejecución de la callback. (Podes
+elegir que hacer con la función callback que le vas a pasar por agumento a la
+función validarIngreso)
+*/
+
+
+// función validarIngreso que recibe dos parametros, un numero y un callback
+// ejecuta al funcion callback el cual recibe como argumento el valor retornante 
+// del operador ternario
+
+function validarIngreso(numero, callback) {
+    callback(numero >= 18? true: false)
+}
+// función mostrarMensaje, recibe como parametro un booleano, y 
+// utiliza un operador ternario que dependiendo de su valor imprimira un mensaje distinto
+function mostrarMensaje(condicion) {
+    condicion ? console.log("EL tipazo es mayor") : console.log("Sos menor, rajá de acá")
+}
+
+validarIngreso(26, mostrarMensaje)
+
