@@ -59,3 +59,22 @@ function calcularElementosRepetidosString(string, elemento) {
 
 calcularElementosRepetidosString("oh oh oh","o")
 
+/* 
+Ejercicio 4) Crear una función lambda por expresión que se llame autosuma, recibe un parámetro que
+es un array de números y retorna la suma del total de los números (utilizar foreach para
+recorrer el array)
+ */
+
+numeros = [1,2,3,4,5,6,7,8,9]
+
+// 
+
+const autoSuma = array => {
+    // instancio valor de suma
+    let suma = 0 // ¿por qué cuando la declaro sin valor (let suma;) me retorna NaN la función?
+    // itero elemento del array, y actualiza el valor de la variable "suma" sumandole cada elemento que itera
+    array.forEach(x => suma = suma + x)
+    return suma
+}
+
+console.log(autoSuma(numeros))
