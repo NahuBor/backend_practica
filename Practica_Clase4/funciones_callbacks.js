@@ -122,4 +122,48 @@ const resultado = agregarConArray(arrayTest, [-1,0,5,10,11])
 console.log(`array retornante con los numeros que cumplen la condición: ${resultado}`)
 
 
-// 
+/* 
+Ejercicio 4) Momento de creatividad! – Definir una función que reciba tres parámetros, algo, y
+dos callbacks, que internamente las ejecute y realice algún procedimiento.
+*/
+
+
+// objeto creado para pasarlo luego como argumento
+
+const usuario = {
+    nombre: "Nahuel",
+    apellido: "Borja",
+    edad: 26,
+    mail: "nauhelemilianoborja@abc.com",
+    esOtaku: true
+}
+// funcion que verifica que el usuario sea otaku, primer callback
+function verificarSiEsOtaku(usuario) {
+    if (usuario.esOtaku) return true
+}
+// funcion que agrega un usuario al array, segundo callback
+function agregarUsuario(array, usuario) {
+    array.push(usuario)
+}
+
+// array vacio para agregar los usuarios otakus
+let listaDeUsuariosOtakus = []
+
+
+// funcion flecha que recibe 3 parametros, un objeto, y dos callbacks
+// inicializa la variable esOtakuElUsuario con el valor retornado por la ejecucion del primer callback
+// un true o false, si es true, se ejecuta el bloque del if y se llama a la sig callback, si es false.
+// se ejecuta el mensaje aclarando que no es otaku
+const verificarYAgregar = (objeto, callback, callbackTwo) => {
+    let esOtakuElUsuario = callback(objeto)
+    if (esOtakuElUsuario) {
+        callbackTwo(listaDeUsuariosOtakus, objeto)
+    } else {
+        console.log("No es otaku el tipazo")
+    }
+}
+
+verificarYAgregar(usuario, verificarSiEsOtaku, agregarUsuario)
+
+console.log(listaDeUsuariosOtakus)
+
