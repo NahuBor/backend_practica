@@ -44,4 +44,56 @@ return arr.reduce((resultadoParcial, elementoActual) => resultadoParcial - eleme
 
 console.log(Calculadora([1,2,3,4,5,6], restaTotal))
 
+// EJERCICIO 1.C
+
+
+// era mejor usar una variable y no escribir todo el tiempo el array jsjs
+numeros = [1,2,3,4,5,6]
+
+
+
+/* funcion flecha que retorna el valor de la ejecución del metodo .reduce 
+    que ira ejecutando el callback sobre cada elemento del array y ira actualizando
+    el valor con cada multiplicacion entre sus elementos 
+*/ 
+let multipliacionTotal = (arr) => {
+    return arr.reduce((elementoParcial, elementoActual) => {
+        return elementoParcial * elementoActual})
+} 
+
+console.log(Calculadora(numeros, multipliacionTotal))
+
+/*
+Ejercicio 2) Definir una función llamada agregarSiEstaEntreCeroYDiez, que reciba un número,
+y un array, la función debe validar si el número es mayor o igual a cero y menor o
+igual a 10, en caso favorable, debe agregarlo en la primera posición del array, caso
+contrario debe arrojar un error informando que el número es mayor o menor a lo
+establecido. Debe retornar el array con el resultado
+*/
+
+const arrayDePrueba = [1,2,3,4,5]
+
+/* funcion flecha que recibe un numero y un array,
+    valida que numero sea mayor o igual a 0 y menor o igual a 10,
+    en caso favorable agrega el numero al principio del array,
+    si no, imprime un mensaje de error,
+    al final la funcion retorna el array
+*/
+let agregarSiEstaEntreCeroYDiez = (array, numero) => {
+    numero >= 0 && numero <= 10
+    ? array.unshift(numero)
+    : console.log (`el numero ${numero} no esta en el array`)
+    return array 
+}
+
+// ejemplo donde el numero cumple la condición
+console.log(`array antes: ${arrayDePrueba}`)
+agregarSiEstaEntreCeroYDiez(arrayDePrueba, 5)
+console.log(`array despues: ${arrayDePrueba}`)
+
+
+// ejemplo donde el numero no cumple la condición
+console.log(`array antes: ${arrayDePrueba}`)
+agregarSiEstaEntreCeroYDiez(arrayDePrueba, 11)
+console.log(`array despues: ${arrayDePrueba}`)
 
