@@ -72,9 +72,23 @@ numeros = [1,2,3,4,5,6,7,8,9]
 const autoSuma = array => {
     // instancio valor de suma
     let suma = 0 // ¿por qué cuando la declaro sin valor (let suma;) me retorna NaN la función?
-    // itero elemento del array, y actualiza el valor de la variable "suma" sumandole cada elemento que itera
+    // itero cada elemento del array, y actualizo el valor de la variable "suma" sumandole cada elemento que itera
     array.forEach(x => suma = suma + x)
     return suma
 }
 
 console.log(autoSuma(numeros))
+
+
+/*
+Ejercicio 5) Crear una función flecha (arrow function) que reciba un nombre, el año de nacimiento, y
+retorne un string que diga: “Hola -nombre- este año tenes o cumplis -numero- años”
+*/
+
+// función flecha que declara 2 oarametros (nombre, anio) y retorna un valor de tipo string con el mensaje dado
+let mensaje = (nombre, anio) => {return `Hola ${nombre}, este año tenes o cumplis ${anio} años`}
+
+
+// imprimimos el valor retornante de ejecutar la funcion mensaje con los argumentos de "nahuel" y 26 
+console.log(mensaje("nahuel", 26))
+
