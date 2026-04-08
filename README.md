@@ -1,1 +1,2 @@
-Este repoo sera el utilizado para las practicas de la materia Backend. 
+Este repoo será el utilizado para las practicas de la materia Desarrollo de sistemas Web (Backend). 
+
