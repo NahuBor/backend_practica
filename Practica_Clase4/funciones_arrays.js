@@ -108,6 +108,23 @@ inscribirAlumno(alumnos, "juan")
 
 console.log(`Los alumnos del array son: ${alumnos}`)
 
+/*
+7) Crear una función que se llame buscador, que reciba un array con nombres de alumnos y un
+nobre a buscar, y diga si encuentra el nombre en la lista.
+*/
+
+/* función flecha que declara dos parametros, el array y el nombre a buscar, 
+    luego utiliza el metodo filter en el array, y verifica q elemento cumplica la 
+    condición de que sea igual al nombre a buscar, si es igual se ejcuta el primer console.log
+    si no, se ejecuta el segundo console.log
+*/
+const encontrarAlumno = (array, nombreABuscar) => {
+    array.filter(x => x === nombreABuscar) 
+        ? console.log(`El alumno ${nombreABuscar} se encuentra en la lista`)
+        : console.log(`El alumno no está en la lista`)
+}
+
+encontrarAlumno(alumnos, "nahuel")
 
 
 
