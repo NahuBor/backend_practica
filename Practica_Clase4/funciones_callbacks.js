@@ -178,17 +178,20 @@ función validarIngreso)
 
 
 // función validarIngreso que recibe dos parametros, un numero y un callback
-// ejecuta al funcion callback el cual recibe como argumento el valor retornante 
+// ejecuta la función callback el cual recibe como argumento el valor retornante 
 // del operador ternario
 
 function validarIngreso(numero, callback) {
-    callback(numero >= 18? true: false)
+    callback(numero > 18? true: false)
 }
 // función mostrarMensaje, recibe como parametro un booleano, y 
 // utiliza un operador ternario que dependiendo de su valor imprimira un mensaje distinto
 function mostrarMensaje(condicion) {
     condicion ? console.log("EL tipazo es mayor") : console.log("Sos menor, rajá de acá")
 }
-
 validarIngreso(26, mostrarMensaje)
+validarIngreso(6, mostrarMensaje)
+
+
+
 
